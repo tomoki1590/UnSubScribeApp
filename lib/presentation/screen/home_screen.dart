@@ -5,9 +5,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
-        body: Column(children: const [Text("Listを入れる")]),
+        body: Column(children: [Text("Listを入れる")]),
       ),
     );
   }
