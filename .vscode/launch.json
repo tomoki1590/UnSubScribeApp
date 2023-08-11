@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run Debug",
+        "program": "lib/main.dart",
+        "request": "launch",
+        "type": "dart",
+        "args": ["--debug"]
+      },
+      {
+        "name": "Run Release",
+        "program": "lib/main.dart",
+        "request": "launch",
+        "type": "dart",
+        "args": ["--release"]
+      }
+    ]
+  }
+  
