@@ -53,3 +53,6 @@ package-lock.json
 
 # env
 *.env
+
+windows
+macos
