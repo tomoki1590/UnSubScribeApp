@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unsbscribe_app/presentation/home_screen.dart';
+import 'package:unsbscribe_app/presentation/screen/home_screen.dart';
 import 'package:unsbscribe_app/presentation/theme.dart';
 
 import '../application/state/overlay_loading_provider.dart';
