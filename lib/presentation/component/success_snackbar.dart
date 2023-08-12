@@ -7,7 +7,7 @@ class SuccessSnackBar extends SnackBar {
           content: Text(message),
           behavior: SnackBarBehavior.floating,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(8),
           ),
         );
 
