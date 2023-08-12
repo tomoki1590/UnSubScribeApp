@@ -5,7 +5,6 @@ import 'package:unsbscribe_app/presentation/app.dart';
 void main() {
   runApp(
     const ProviderScope(
-      overrides: [],
       child: App(),
     ),
   );
