@@ -1,21 +1,21 @@
 name: unsbscribe_app
 description: Unsubscribe app.
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 dependencies:
+  cloud_firestore: ^4.8.3
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.15.0
   flutter:
     sdk: flutter
-  cloud_firestore: ^4.8.3
-  firebase_core: ^2.15.0
-  cupertino_icons: ^1.0.2
-  freezed: ^2.4.1
-  pedantic_mono: ^1.21.1
   flutter_riverpod: ^2.3.6
+  freezed: ^2.4.1
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
+  pedantic_mono: ^1.21.1
 
 dev_dependencies:
   build_runner: ^2.4.6
@@ -23,6 +23,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   json_serializable: ^6.7.1
-  
+
 flutter:
   uses-material-design: true
