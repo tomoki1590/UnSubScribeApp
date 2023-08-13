@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "511275537144",
+    "project_id": "unsubscribeapp-d56e4",
+    "storage_bucket": "unsubscribeapp-d56e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511275537144:android:b673fb4a4c05037759a10d",
+        "android_client_info": {
+          "package_name": "com.example.unsbscribe_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511275537144-vu1rjqtuf5o8alqk9n1crtj0c420qjq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0nYhVpR1K9bo5Y5s69GWY2-g0XJ5Xips"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511275537144-vu1rjqtuf5o8alqk9n1crtj0c420qjq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

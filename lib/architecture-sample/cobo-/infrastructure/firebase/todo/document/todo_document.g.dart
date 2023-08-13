@@ -10,7 +10,6 @@ part of 'todo_document.dart';
 
 _$_TodoDocument _$$_TodoDocumentFromJson(Map<String, dynamic> json) =>
     _$_TodoDocument(
-      todoId: json['todoId'] as String? ?? '',
       description: json['description'] as String? ?? '',
       createdAt:
           const TimestampConverter().fromJson(json['createdAt'] as Timestamp?),
@@ -18,7 +17,6 @@ _$_TodoDocument _$$_TodoDocumentFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TodoDocumentToJson(_$_TodoDocument instance) =>
     <String, dynamic>{
-      'todoId': instance.todoId,
       'description': instance.description,
       'createdAt': const TimestampConverter().toJson(instance.createdAt),
     };

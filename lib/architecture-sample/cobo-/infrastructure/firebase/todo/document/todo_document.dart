@@ -9,7 +9,6 @@ part 'todo_document.g.dart';
 @freezed
 class TodoDocument with _$TodoDocument {
   const factory TodoDocument({
-    @Default('') String todoId,
     @Default('') String description,
     @TimestampConverter() DateTime? createdAt,
   }) = _TodoDocument;
@@ -21,7 +20,6 @@ class TodoDocument with _$TodoDocument {
     final data = ds.data()! as Map<String, dynamic>;
     return TodoDocument.fromJson(<String, dynamic>{
       ...data,
-      'expenseId': ds.id,
     });
   }
 
