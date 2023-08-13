@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:unsbscribe_app/architecture-sample/cobo-/presentation/page/todo/todo_page.dart';
+import 'package:unsbscribe_app/presentation/screen_navigation.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,7 +9,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(children: const [Text('Listを入れる')]),
+        body: Column(
+          children: [
+            const Text('Listを入れる'),
+            TextButton(
+              onPressed: () {
+                ScreenNavigation.push(context, const TodoPage());
+              },
+              child: const Text('サンプルTodo/cobo-architecture'),
+            )
+          ],
+        ),
       ),
     );
   }
