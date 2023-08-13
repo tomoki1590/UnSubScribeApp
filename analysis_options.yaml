@@ -1,3 +1,4 @@
 include: package:pedantic_mono/analysis_options.yaml
 linter:
-rules:
+  rules:
+    - sort_pub_dependencies

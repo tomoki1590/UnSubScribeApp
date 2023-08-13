@@ -10,13 +10,13 @@ class ScreenNavigation {
   /// [page] - 遷移先のウィジェットを指定
   /// [rootNavigator] - true の場合、最上位の Navigator を使用
   /// [fullscreenDialog] - true の場合、遷移先をモーダルのフルスクリーンダイアログとして表示
-  static Future push(
+  static Future<void> push(
     BuildContext context,
     Widget page, {
     bool rootNavigator = false,
     bool fullscreenDialog = false,
   }) async {
-    return Navigator.of(context, rootNavigator: rootNavigator).push(
+    return Navigator.of(context, rootNavigator: rootNavigator).push<void>(
       MaterialPageRoute(
         builder: (_) => page,
         fullscreenDialog: fullscreenDialog,
@@ -30,13 +30,14 @@ class ScreenNavigation {
   /// [page] - 遷移先のウィジェットを指定
   /// [rootNavigator] - true の場合、最上位の Navigator を使用
   /// [fullscreenDialog] - true の場合、遷移先をモーダルのフルスクリーンダイアログとして表示
-  static Future pushReplacement(
+  static Future<void> pushReplacement(
     BuildContext context,
     Widget page, {
     bool rootNavigator = false,
     bool fullscreenDialog = false,
   }) async {
-    return Navigator.of(context, rootNavigator: rootNavigator).pushReplacement(
+    return Navigator.of(context, rootNavigator: rootNavigator)
+        .pushReplacement<void, void>(
       MaterialPageRoute(
         builder: (_) => page,
         fullscreenDialog: fullscreenDialog,
@@ -50,14 +51,14 @@ class ScreenNavigation {
   /// [page] - 遷移先のウィジェットを指定
   /// [rootNavigator] - true の場合、最上位の Navigator を使用
   /// [fullscreenDialog] - true の場合、遷移先をモーダルのフルスクリーンダイアログとして表示
-  static Future pushAndRemoveUntil(
+  static Future<void> pushAndRemoveUntil(
     BuildContext context,
     Widget page, {
     bool rootNavigator = false,
     bool fullscreenDialog = false,
   }) async {
     return Navigator.of(context, rootNavigator: rootNavigator)
-        .pushAndRemoveUntil(
+        .pushAndRemoveUntil<void>(
       MaterialPageRoute(
         builder: (_) => page,
         fullscreenDialog: fullscreenDialog,
@@ -70,7 +71,7 @@ class ScreenNavigation {
   ///
   /// [context] - BuildContext を指定
   /// [rootNavigator] - true の場合、最上位の Navigator を使用
-  static Future pop(
+  static Future<void> pop(
     BuildContext context, {
     bool rootNavigator = false,
   }) async {
@@ -82,7 +83,7 @@ class ScreenNavigation {
   /// [context] - BuildContext を指定
   /// [predicate] - ポップが停止する条件を指定する関数を指定
   /// [rootNavigator] - true の場合、最上位の Navigator を使用
-  static Future popUntil(
+  static Future<void> popUntil(
     BuildContext context, {
     required RoutePredicate predicate,
     bool rootNavigator = false,
@@ -95,7 +96,7 @@ class ScreenNavigation {
   ///
   /// [context] - BuildContext を指定
   /// [rootNavigator] - true の場合、最上位の Navigator を使用
-  static Future popUntilRoot(
+  static Future<void> popUntilRoot(
     BuildContext context, {
     bool rootNavigator = false,
   }) async {
