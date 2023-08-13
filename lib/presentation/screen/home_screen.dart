@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:unsbscribe_app/architecture-sample/cobo-/presentation/page/todo/todo_page.dart';
 import 'package:unsbscribe_app/presentation/screen_navigation.dart';
+
+import '../../architecture-sample/cobo-/presentation/page/todo/todo_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
