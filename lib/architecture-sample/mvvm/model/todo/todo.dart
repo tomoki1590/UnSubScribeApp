@@ -14,6 +14,7 @@ class Todo with _$Todo {
     @Default('') String description,
     @TimestampConverter() DateTime? createdAt,
   }) = _Todo;
+  const Todo._();
 
   factory Todo.fromJson(Map<String, dynamic> json) => _$TodoFromJson(json);
 
@@ -25,5 +26,8 @@ class Todo with _$Todo {
     });
   }
 
-  const Todo._();
+  Map<String, dynamic> toJsonForFirestore() {
+    final json = toJson();
+    return json..remove('todoId');
+  }
 }
