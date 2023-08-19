@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// Navigator を扱いやすく Wrap したクラス
-class ScreenNavigation {
-  const ScreenNavigation._();
+class PageNavigator {
+  const PageNavigator._();
 
   /// 指定したページに遷移
   ///

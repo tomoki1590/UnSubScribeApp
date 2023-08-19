@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unsbscribe_app/presentation/screen/home_screen.dart';
+import 'package:unsbscribe_app/presentation/page/home_page.dart';
 import 'package:unsbscribe_app/presentation/theme.dart';
 
 import '../application/state/overlay_loading_provider.dart';
@@ -15,7 +15,7 @@ class App extends ConsumerWidget {
       title: 'サブスク管理',
       debugShowCheckedModeBanner: false,
       theme: ref.read(themeProvider),
-      home: const HomeScreen(),
+      home: const HomePage(),
       builder: (context, child) {
         return Consumer(
           builder: (context, ref, _) {
