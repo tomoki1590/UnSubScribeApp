@@ -47,9 +47,11 @@ class TodoPageViewModel extends StateNotifier<TodoPageState> {
     // 初期化時にTodoの一覧を取得する
     _subscription = _todoRepository.subscribeTodos().listen(
       (todos) {
-        _overlayLoading.update((_) => true);
-        state = state.copyWith(todos: AsyncValue.data(todos));
-        _overlayLoading.update((_) => false);
+        // state = state.copyWith(todos: AsyncValue.data(todos));
+        state = TodoPageState(
+          todos: AsyncValue.data(todos),
+          inputText: state.inputText,
+        );
       },
     );
   }
