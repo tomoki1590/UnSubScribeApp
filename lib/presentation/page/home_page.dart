@@ -4,6 +4,7 @@ import 'package:unsbscribe_app/presentation/page_navigator.dart';
 import '../../architecture-sample/cobo-/presentation/page/todo/todo_page.dart';
 import '../../architecture-sample/mvvm/presentation/view/todo_page.dart'
     as mvvm;
+import 'basic_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,7 +27,13 @@ class HomePage extends StatelessWidget {
                 PageNavigator.push(context, const mvvm.TodoPage());
               },
               child: const Text('サンプルTodo/simple-mvvm-architecture'),
-            )
+            ),
+            TextButton(
+              onPressed: () {
+                PageNavigator.push(context, const BasicPage());
+              },
+              child: const Text('仮ページ'),
+            ),
           ],
         ),
       ),
