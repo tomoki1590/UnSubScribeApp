@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars, avoid_classes_with_only_static_members
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
+    show TargetPlatform, defaultTargetPlatform, kIsWeb;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '511275537144',
     projectId: 'unsubscribeapp-d56e4',
     storageBucket: 'unsubscribeapp-d56e4.appspot.com',
-    iosClientId: '511275537144-airfc6vfvf5ljuhlhsi060lo5g6kreqe.apps.googleusercontent.com',
+    iosClientId:
+        '511275537144-airfc6vfvf5ljuhlhsi060lo5g6kreqe.apps.googleusercontent.com',
     iosBundleId: 'com.example.unsbscribeApp',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '511275537144',
     projectId: 'unsubscribeapp-d56e4',
     storageBucket: 'unsubscribeapp-d56e4.appspot.com',
-    iosClientId: '511275537144-51m5jalv0040uo6ma1f72qj7m4adhf5r.apps.googleusercontent.com',
+    iosClientId:
+        '511275537144-51m5jalv0040uo6ma1f72qj7m4adhf5r.apps.googleusercontent.com',
     iosBundleId: 'com.unsubscribe.app',
   );
 }
