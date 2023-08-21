@@ -16,7 +16,7 @@ class AddSubscribePage extends StatelessWidget {
             ),
             Expanded(child: SizedBox()),
             Text(
-              'その他のサブスク',
+              '他のサブスク',
               style: TextStyle(fontSize: 16),
             )
           ],
@@ -34,7 +34,6 @@ class AddSubscribePage extends StatelessWidget {
                   color: Color.fromRGBO(24, 24, 24, 1),
                   child: Center(
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Image(
                           image: NetworkImage(
