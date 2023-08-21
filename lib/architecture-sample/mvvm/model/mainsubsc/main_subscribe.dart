@@ -10,7 +10,7 @@ class Mainsubscribe with _$Mainsubscribe {
     @Default('') String subscribeId,
     @Default('') String subscribeName,
     @Default('') String deleteUrl,
-    @Default([]) List<Map<String, int >> subscribePlan,
+    @Default(<String, int>{}) Map<String, int> subscribePlan,
   }) = _Mainsubscribe;
   const Mainsubscribe._();
   factory Mainsubscribe.fromJson(Map<String, dynamic> json) =>

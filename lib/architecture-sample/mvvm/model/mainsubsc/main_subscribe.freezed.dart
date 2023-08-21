@@ -23,8 +23,7 @@ mixin _$Mainsubscribe {
   String get subscribeId => throw _privateConstructorUsedError;
   String get subscribeName => throw _privateConstructorUsedError;
   String get deleteUrl => throw _privateConstructorUsedError;
-  List<Map<String, int>> get subscribePlan =>
-      throw _privateConstructorUsedError;
+  Map<String, int> get subscribePlan => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,7 +41,7 @@ abstract class $MainsubscribeCopyWith<$Res> {
       {String subscribeId,
       String subscribeName,
       String deleteUrl,
-      List<Map<String, int>> subscribePlan});
+      Map<String, int> subscribePlan});
 }
 
 /// @nodoc
@@ -79,7 +78,7 @@ class _$MainsubscribeCopyWithImpl<$Res, $Val extends Mainsubscribe>
       subscribePlan: null == subscribePlan
           ? _value.subscribePlan
           : subscribePlan // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, int>>,
+              as Map<String, int>,
     ) as $Val);
   }
 }
@@ -96,7 +95,7 @@ abstract class _$$_MainsubscribeCopyWith<$Res>
       {String subscribeId,
       String subscribeName,
       String deleteUrl,
-      List<Map<String, int>> subscribePlan});
+      Map<String, int> subscribePlan});
 }
 
 /// @nodoc
@@ -131,7 +130,7 @@ class __$$_MainsubscribeCopyWithImpl<$Res>
       subscribePlan: null == subscribePlan
           ? _value._subscribePlan
           : subscribePlan // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, int>>,
+              as Map<String, int>,
     ));
   }
 }
@@ -143,7 +142,7 @@ class _$_Mainsubscribe extends _Mainsubscribe {
       {this.subscribeId = '',
       this.subscribeName = '',
       this.deleteUrl = '',
-      final List<Map<String, int>> subscribePlan = const []})
+      final Map<String, int> subscribePlan = const <String, int>{}})
       : _subscribePlan = subscribePlan,
         super._();
 
@@ -159,13 +158,13 @@ class _$_Mainsubscribe extends _Mainsubscribe {
   @override
   @JsonKey()
   final String deleteUrl;
-  final List<Map<String, int>> _subscribePlan;
+  final Map<String, int> _subscribePlan;
   @override
   @JsonKey()
-  List<Map<String, int>> get subscribePlan {
-    if (_subscribePlan is EqualUnmodifiableListView) return _subscribePlan;
+  Map<String, int> get subscribePlan {
+    if (_subscribePlan is EqualUnmodifiableMapView) return _subscribePlan;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_subscribePlan);
+    return EqualUnmodifiableMapView(_subscribePlan);
   }
 
   @override
@@ -212,7 +211,7 @@ abstract class _Mainsubscribe extends Mainsubscribe {
       {final String subscribeId,
       final String subscribeName,
       final String deleteUrl,
-      final List<Map<String, int>> subscribePlan}) = _$_Mainsubscribe;
+      final Map<String, int> subscribePlan}) = _$_Mainsubscribe;
   const _Mainsubscribe._() : super._();
 
   factory _Mainsubscribe.fromJson(Map<String, dynamic> json) =
@@ -225,7 +224,7 @@ abstract class _Mainsubscribe extends Mainsubscribe {
   @override
   String get deleteUrl;
   @override
-  List<Map<String, int>> get subscribePlan;
+  Map<String, int> get subscribePlan;
   @override
   @JsonKey(ignore: true)
   _$$_MainsubscribeCopyWith<_$_Mainsubscribe> get copyWith =>

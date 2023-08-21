@@ -11,10 +11,10 @@ _$_Mainsubscribe _$$_MainsubscribeFromJson(Map<String, dynamic> json) =>
       subscribeId: json['subscribeId'] as String? ?? '',
       subscribeName: json['subscribeName'] as String? ?? '',
       deleteUrl: json['deleteUrl'] as String? ?? '',
-      subscribePlan: (json['subscribePlan'] as List<dynamic>?)
-              ?.map((e) => Map<String, int>.from(e as Map))
-              .toList() ??
-          const [],
+      subscribePlan: (json['subscribePlan'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as int),
+          ) ??
+          const <String, int>{},
     );
 
 Map<String, dynamic> _$$_MainsubscribeToJson(_$_Mainsubscribe instance) =>
