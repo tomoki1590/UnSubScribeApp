@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:unsbscribe_app/presentation/page_navigator.dart';
 
 import '../../architecture-sample/cobo-/presentation/page/todo/todo_page.dart';
 import '../../architecture-sample/mvvm/presentation/view/todo_page.dart'
     as mvvm;
+import '../page_navigator.dart';
 import 'basic_page.dart';
 
 class HomePage extends StatelessWidget {

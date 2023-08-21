@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:unsbscribe_app/presentation/page_navigator.dart';
 
-import '../screen_navigation.dart';
 import 'basic_page.dart';
 
 class SettingPage extends StatelessWidget {
@@ -15,7 +15,7 @@ class SettingPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              ScreenNavigation.push(context, const BasicPage());
+              PageNavigator.push(context, const BasicPage());
             },
             icon: const Icon(
               Icons.home,
