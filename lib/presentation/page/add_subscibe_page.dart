@@ -8,17 +8,23 @@ class AddSubscribePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0x00031524),
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           children: [
-            Text(
-              '主要サブスク',
-              style: TextStyle(fontSize: 16),
+            TextButton(
+              child: const Text(
+                '主要サブスク',
+                style: TextStyle(fontSize: 16),
+              ),
+              onPressed: () {},
             ),
-            Expanded(child: SizedBox()),
-            Text(
-              '他のサブスク',
-              style: TextStyle(fontSize: 16),
-            )
+            const Expanded(child: SizedBox()),
+            TextButton(
+              child: const Text(
+                '他のサブスク',
+                style: TextStyle(fontSize: 16),
+              ),
+              onPressed: () {},
+            ),
           ],
         ),
       ),
