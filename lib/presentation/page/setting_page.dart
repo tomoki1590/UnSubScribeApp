@@ -13,18 +13,6 @@ class SettingPage extends StatelessWidget {
       throw Exception('Could not launch $url');
     }
   }
-  // Future<void> _openUrl(
-  //   Uri uri,
-  // ) async {
-  //   const url = 'https://www.kamo-it.org/';
-  //   if (await canLaunchUrl(url as Uri)) {
-  //     await launchUrl(
-  //       url as Uri,
-  //     );
-  //   } else {
-  //     throw 'このURLにはアクセスできません';
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
