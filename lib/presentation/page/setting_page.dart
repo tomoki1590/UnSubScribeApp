@@ -1,10 +1,30 @@
+import 'package:buy_me_a_coffee_widget/buy_me_a_coffee_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:unsbscribe_app/presentation/page_navigator.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+import '../page_navigator.dart';
 import 'basic_page.dart';
 
 class SettingPage extends StatelessWidget {
-  const SettingPage({super.key});
+  SettingPage({super.key});
+  final url = Uri.parse('https://forms.gle/cqwX14tgmS6nDGVq8');
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+  // Future<void> _openUrl(
+  //   Uri uri,
+  // ) async {
+  //   const url = 'https://www.kamo-it.org/';
+  //   if (await canLaunchUrl(url as Uri)) {
+  //     await launchUrl(
+  //       url as Uri,
+  //     );
+  //   } else {
+  //     throw 'このURLにはアクセスできません';
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -24,70 +44,100 @@ class SettingPage extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: Container(
-          width: 336,
-          height: 464,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(46),
-            color: Colors.white,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
+      body: Container(
+        width: 336,
+        height: 464,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(46),
+          color: Colors.white,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     '通知設定',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.keyboard_arrow_right),
-                  )
+                  Icon(Icons.keyboard_arrow_right),
                 ],
               ),
-              Row(
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     'テーマカラー変更',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.keyboard_arrow_right),
-                  )
+                  Icon(Icons.keyboard_arrow_right),
                 ],
               ),
-              const Text(
-                '起動画面に戻る',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
-                ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '起動画面に戻る',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Icon(Icons.keyboard_arrow_right),
+                ],
               ),
-              const Text(
-                'データ引き継ぎ',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
-                ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'データ引き継ぎ',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Icon(Icons.keyboard_arrow_right),
+                ],
               ),
-              const Text(
-                'ご意見箱',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
-                ),
+            ),
+            TextButton(
+              onPressed: _launchUrl,
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'ご意見箱',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Icon(Icons.keyboard_arrow_right)
+                ],
               ),
-            ],
-          ),
+            ),
+            const BuyMeACoffeeWidget(
+              sponsorID: 'sBGXj7Pl4',
+            ),
+          ],
         ),
       ),
     );
