@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unsbscribe_app/presentation/page/home_page.dart';
-import 'package:unsbscribe_app/presentation/theme.dart';
+import 'package:unsbscribe_app/presentation/view/component/page_viewer.dart';
 
-import '../application/state/overlay_loading_provider.dart';
-import 'component/loading.dart';
+import 'theme.dart';
+import 'view/component/loading.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
@@ -15,7 +14,7 @@ class App extends ConsumerWidget {
       title: 'サブスク管理',
       debugShowCheckedModeBanner: false,
       theme: ref.read(themeProvider),
-      home: const HomePage(),
+      home: const PageViewer(),
       builder: (context, child) {
         return Consumer(
           builder: (context, ref, _) {
