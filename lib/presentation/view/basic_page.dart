@@ -9,6 +9,8 @@ class BasicPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: const Color(0x00031524),
       appBar: AppBar(
@@ -34,7 +36,7 @@ class BasicPage extends StatelessWidget {
               onTap: () {},
               child: SizedBox(
                 height: 100,
-                width: 352,
+                width: screenWidth,
                 child: Card(
                   color: const Color.fromRGBO(24, 24, 24, 1),
                   child: Column(
@@ -97,7 +99,7 @@ class BasicPage extends StatelessWidget {
             ),
             SizedBox(
               height: 100,
-              width: 352,
+              width: screenWidth,
               child: Card(
                 color: const Color.fromRGBO(24, 24, 24, 1),
                 child: Column(
@@ -158,7 +160,7 @@ class BasicPage extends StatelessWidget {
             ),
             SizedBox(
               height: 100,
-              width: 352,
+              width: screenWidth,
               child: Card(
                 color: const Color.fromRGBO(24, 24, 24, 1),
                 child: Column(
@@ -219,7 +221,7 @@ class BasicPage extends StatelessWidget {
             ),
             SizedBox(
               height: 100,
-              width: 352,
+              width: screenWidth,
               child: Card(
                 color: const Color.fromRGBO(24, 24, 24, 1),
                 child: Column(
@@ -280,7 +282,7 @@ class BasicPage extends StatelessWidget {
             ),
             SizedBox(
               height: 100,
-              width: 352,
+              width: screenWidth,
               child: Card(
                 color: const Color.fromRGBO(24, 24, 24, 1),
                 child: Column(
