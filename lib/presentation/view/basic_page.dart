@@ -3,10 +3,13 @@ import 'package:unsbscribe_app/presentation/view/add_subscibe_page.dart';
 import 'package:unsbscribe_app/presentation/view/page_navigator.dart';
 
 import 'component/app_colors.dart';
-import 'setting_page.dart';
 
 class BasicPage extends StatelessWidget {
-  const BasicPage({super.key});
+  const BasicPage({
+    super.key,
+    required this.controller,
+  });
+  final PageController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +21,9 @@ class BasicPage extends StatelessWidget {
         backgroundColor: const Color(0x00031524),
         leading: IconButton(
           onPressed: () {
-            PageNavigator.pushAndRemoveUntil(
-              context,
-              SettingPage(),
+            controller.previousPage(
+              duration: const Duration(milliseconds: 200),
+              curve: Curves.linear,
             );
           },
           icon: const Icon(

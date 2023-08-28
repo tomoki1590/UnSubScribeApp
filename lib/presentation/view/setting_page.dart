@@ -2,12 +2,12 @@ import 'package:buy_me_a_coffee_widget/buy_me_a_coffee_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'basic_page.dart';
 import 'component/app_colors.dart';
-import 'page_navigator.dart';
 
 class SettingPage extends StatelessWidget {
-  SettingPage({super.key});
+  SettingPage({super.key, required this.controller});
+  final PageController controller;
+
   final url = Uri.parse('https://forms.gle/cqwX14tgmS6nDGVq8');
   Future<void> _launchUrl() async {
     if (!await launchUrl(url)) {
@@ -26,7 +26,10 @@ class SettingPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              PageNavigator.push(context, const BasicPage());
+              controller.nextPage(
+                duration: const Duration(milliseconds: 200),
+                curve: Curves.linear,
+              );
             },
             icon: const Icon(
               Icons.home,
