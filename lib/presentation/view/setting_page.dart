@@ -32,100 +32,103 @@ class SettingPage extends StatelessWidget {
           )
         ],
       ),
-      body: Container(
-        width: 336,
-        height: 464,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(46),
-          color: Colors.white,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '通知設定',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: Container(
+          width: double.infinity,
+          height: 464,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(46),
+            color: Colors.white,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '通知設定',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
+                    Icon(Icons.keyboard_arrow_right),
+                  ],
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'テーマカラー変更',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'テーマカラー変更',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
+                    Icon(Icons.keyboard_arrow_right),
+                  ],
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '起動画面に戻る',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '起動画面に戻る',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
+                    Icon(Icons.keyboard_arrow_right),
+                  ],
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'データ引き継ぎ',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'データ引き継ぎ',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
+                    Icon(Icons.keyboard_arrow_right),
+                  ],
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: _launchUrl,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'ご意見箱',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+              TextButton(
+                onPressed: _launchUrl,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'ご意見箱',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right)
-                ],
+                    Icon(Icons.keyboard_arrow_right)
+                  ],
+                ),
               ),
-            ),
-            const BuyMeACoffeeWidget(
-              sponsorID: 'sBGXj7Pl4',
-            ),
-          ],
+              const BuyMeACoffeeWidget(
+                sponsorID: 'sBGXj7Pl4',
+              ),
+            ],
+          ),
         ),
       ),
     );
