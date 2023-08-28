@@ -4,10 +4,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unsbscribe_app/application/state/overlay_loading_provider.dart';
 
 import '../../firebase/repository/todo_repository.dart';
 import '../../model/todo/todo.dart';
+import '../view/component/loading.dart';
 
 /// TodoPageの状態を表すクラス
 /// 主にTodoPageに表示したいデータを保持する

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:unsbscribe_app/presentation/page/add_subscibe_page.dart';
-import 'package:unsbscribe_app/presentation/page_navigator.dart';
+import 'package:unsbscribe_app/presentation/view/add_subscibe_page.dart';
+import 'package:unsbscribe_app/presentation/view/page_navigator.dart';
 
 import 'setting_page.dart';
 
@@ -17,7 +17,7 @@ class BasicPage extends StatelessWidget {
           onPressed: () {
             PageNavigator.pushAndRemoveUntil(
               context,
-              const SettingPage(),
+              SettingPage(),
             );
           },
           icon: const Icon(

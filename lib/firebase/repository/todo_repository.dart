@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unsbscribe_app/architecture-sample/mvvm/firebase/firestore_refs.dart';
+import 'package:unsbscribe_app/firebase/firestore_refs.dart';
 
 import '../../model/todo/todo.dart';
 

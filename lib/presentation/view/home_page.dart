@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:unsbscribe_app/presentation/view/page_navigator.dart';
+import 'package:unsbscribe_app/presentation/view/todo_page.dart';
 
-import '../../architecture-sample/cobo-/presentation/page/todo/todo_page.dart';
-import '../../architecture-sample/mvvm/presentation/view/todo_page.dart'
-    as mvvm;
-import '../page_navigator.dart';
 import 'basic_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -24,7 +22,7 @@ class HomePage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                PageNavigator.push(context, const mvvm.TodoPage());
+                PageNavigator.push(context, const TodoPage());
               },
               child: const Text('サンプルTodo/simple-mvvm-architecture'),
             ),

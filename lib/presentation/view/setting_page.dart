@@ -2,8 +2,8 @@ import 'package:buy_me_a_coffee_widget/buy_me_a_coffee_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../page_navigator.dart';
 import 'basic_page.dart';
+import 'page_navigator.dart';
 
 class SettingPage extends StatelessWidget {
   SettingPage({super.key});

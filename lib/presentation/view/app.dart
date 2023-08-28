@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unsbscribe_app/presentation/page/home_page.dart';
-import 'package:unsbscribe_app/presentation/theme.dart';
-
-import '../application/state/overlay_loading_provider.dart';
-import 'component/loading.dart';
+import 'package:unsbscribe_app/presentation/view/component/loading.dart';
+import 'package:unsbscribe_app/presentation/view/home_page.dart';
+import 'package:unsbscribe_app/presentation/view/theme.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
