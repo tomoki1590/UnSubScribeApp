@@ -76,9 +76,13 @@ class SettingPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
+                        color: AppColors.white,
                       ),
                     ),
-                    Icon(Icons.keyboard_arrow_right),
+                    Icon(
+                      Icons.keyboard_arrow_right,
+                      color: AppColors.white,
+                    ),
                   ],
                 ),
               ),
@@ -92,9 +96,13 @@ class SettingPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
+                        color: AppColors.white,
                       ),
                     ),
-                    Icon(Icons.keyboard_arrow_right),
+                    Icon(
+                      Icons.keyboard_arrow_right,
+                      color: AppColors.white,
+                    ),
                   ],
                 ),
               ),
@@ -108,9 +116,13 @@ class SettingPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
+                        color: AppColors.white,
                       ),
                     ),
-                    Icon(Icons.keyboard_arrow_right),
+                    Icon(
+                      Icons.keyboard_arrow_right,
+                      color: AppColors.white,
+                    ),
                   ],
                 ),
               ),
@@ -124,9 +136,13 @@ class SettingPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
+                        color: AppColors.white,
                       ),
                     ),
-                    Icon(Icons.keyboard_arrow_right)
+                    Icon(
+                      Icons.keyboard_arrow_right,
+                      color: AppColors.white,
+                    )
                   ],
                 ),
               ),
