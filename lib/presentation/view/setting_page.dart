@@ -2,7 +2,7 @@ import 'package:buy_me_a_coffee_widget/buy_me_a_coffee_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'component/app_colors.dart';
+import '../app_colors.dart';
 
 class SettingPage extends StatelessWidget {
   SettingPage({super.key, required this.controller});
