@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'basic_page.dart';
+import 'component/app_colors.dart';
 import 'page_navigator.dart';
 
 class SettingPage extends StatelessWidget {
@@ -16,6 +17,8 @@ class SettingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: const Color(0x00031524),
       appBar: AppBar(
@@ -27,105 +30,111 @@ class SettingPage extends StatelessWidget {
             },
             icon: const Icon(
               Icons.home,
-              color: Colors.white,
+              color: AppColors.gray2,
             ),
           )
         ],
       ),
-      body: Container(
-        width: 336,
-        height: 464,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(46),
-          color: Colors.white,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '通知設定',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Container(
+          width: screenWidth,
+          height: 464,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(46),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '通知設定',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.white,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
-              ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'テーマカラー変更',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+                    Icon(
+                      Icons.keyboard_arrow_right,
+                      color: AppColors.white,
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
+                  ],
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '起動画面に戻る',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'テーマカラー変更',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
+                    Icon(Icons.keyboard_arrow_right),
+                  ],
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'データ引き継ぎ',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '起動画面に戻る',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right),
-                ],
+                    Icon(Icons.keyboard_arrow_right),
+                  ],
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: _launchUrl,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'ご意見箱',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+              TextButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'データ引き継ぎ',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Icon(Icons.keyboard_arrow_right)
-                ],
+                    Icon(Icons.keyboard_arrow_right),
+                  ],
+                ),
               ),
-            ),
-            const BuyMeACoffeeWidget(
-              sponsorID: 'sBGXj7Pl4',
-            ),
-          ],
+              TextButton(
+                onPressed: _launchUrl,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'ご意見箱',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    Icon(Icons.keyboard_arrow_right)
+                  ],
+                ),
+              ),
+              const BuyMeACoffeeWidget(
+                sponsorID: 'sBGXj7Pl4',
+              ),
+            ],
+          ),
         ),
       ),
     );

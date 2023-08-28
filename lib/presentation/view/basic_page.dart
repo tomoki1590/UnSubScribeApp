@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:unsbscribe_app/presentation/view/add_subscibe_page.dart';
 import 'package:unsbscribe_app/presentation/view/page_navigator.dart';
 
+import 'component/app_colors.dart';
 import 'setting_page.dart';
 
 class BasicPage extends StatelessWidget {
@@ -25,7 +26,7 @@ class BasicPage extends StatelessWidget {
           icon: const Icon(
             Icons.settings,
             size: 26,
-            color: Color.fromRGBO(217, 217, 217, 1),
+            color: AppColors.gray2,
           ),
         ),
       ),
@@ -38,7 +39,7 @@ class BasicPage extends StatelessWidget {
                 height: 100,
                 width: screenWidth,
                 child: Card(
-                  color: const Color.fromRGBO(24, 24, 24, 1),
+                  color: AppColors.black3,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -57,7 +58,7 @@ class BasicPage extends StatelessWidget {
                           Text(
                             'Flutter大学',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: AppColors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                             ),
@@ -66,7 +67,7 @@ class BasicPage extends StatelessWidget {
                           Text(
                             '解約日まで 31 日',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: AppColors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                             ),
@@ -101,7 +102,7 @@ class BasicPage extends StatelessWidget {
               height: 100,
               width: screenWidth,
               child: Card(
-                color: const Color.fromRGBO(24, 24, 24, 1),
+                color: AppColors.black3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -120,7 +121,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           'Flutter大学',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -129,7 +130,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           '解約日まで 31 日',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -162,7 +163,7 @@ class BasicPage extends StatelessWidget {
               height: 100,
               width: screenWidth,
               child: Card(
-                color: const Color.fromRGBO(24, 24, 24, 1),
+                color: AppColors.black3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -181,7 +182,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           'Flutter大学',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -190,7 +191,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           '解約日まで 31 日',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -223,7 +224,7 @@ class BasicPage extends StatelessWidget {
               height: 100,
               width: screenWidth,
               child: Card(
-                color: const Color.fromRGBO(24, 24, 24, 1),
+                color: AppColors.black3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -242,7 +243,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           'Flutter大学',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -251,7 +252,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           '解約日まで 31 日',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -284,7 +285,7 @@ class BasicPage extends StatelessWidget {
               height: 100,
               width: screenWidth,
               child: Card(
-                color: const Color.fromRGBO(24, 24, 24, 1),
+                color: AppColors.black3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -303,7 +304,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           'Flutter大学',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -312,7 +313,7 @@ class BasicPage extends StatelessWidget {
                         Text(
                           '解約日まで 31 日',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
