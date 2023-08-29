@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:unsbscribe_app/presentation/page_navigator.dart';
-import 'package:unsbscribe_app/presentation/view/add_subscibe_page.dart';
+
 
 import '../app_colors.dart';
+import '../page_navigator.dart';
+import 'add_subscibe_page.dart';
 
 class BasicPage extends StatelessWidget {
   const BasicPage({

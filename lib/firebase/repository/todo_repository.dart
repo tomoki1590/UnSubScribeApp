@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unsbscribe_app/firebase/firestore_refs.dart';
 
 import '../../model/todo/todo.dart';
+import '../firestore_refs.dart';
 
 final todoRepositoryProvider = Provider<TodoRepository>(
   (_) => TodoRepository(),
