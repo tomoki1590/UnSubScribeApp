@@ -1,4 +1,4 @@
-# unsbscribe_app
+# unsubscribe_app
 
 サブスク管理アプリ
 
