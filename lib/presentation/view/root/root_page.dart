@@ -6,6 +6,12 @@ import 'package:unsubscribe_app/presentation/view_model/root/root_page_view_mode
 import '../../view_model/root/loading_state.dart';
 import '../component/loading.dart';
 
+/// [RootPage]はユーザーのログイン状態に基づいて異なるウィジェットを表示する最も根元にある画面。
+///
+/// - ログインが成功した場合は、[PageViewer]を表示する。
+/// - ログインに失敗した場合は、エラーメッセージを表示する。
+/// - ログインが進行中の場合は、ローディング画面を表示する。
+///
 class RootPage extends ConsumerWidget {
   const RootPage({super.key});
 
