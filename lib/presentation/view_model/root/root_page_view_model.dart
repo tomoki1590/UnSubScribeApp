@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:unsubscribe_app/firebase/repository/auth/auth_repository.dart';
 
-import 'loading_state.dart';
+import 'login_state.dart';
 
 /// [RootPageState]は[RootPage]の現在のログイン状態を表現するクラスです。
 ///
@@ -45,7 +45,7 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
         return;
       }
       state = RootPageState(
-        loginState: LoginSuccess(user),
+        loginState: LoginSuccess(user: user),
       );
     });
   }
@@ -56,7 +56,11 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
     try {
       await authRepository.signInAnonymously();
     } on Exception {
-      state = RootPageState(loginState: LoginFailure());
+      state = RootPageState(
+        loginState: LoginFailure(
+          errorText: 'サインインに失敗しました',
+        ),
+      );
     }
   }
 

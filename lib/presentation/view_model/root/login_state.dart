@@ -5,10 +5,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 sealed class LoginState {}
 
 class LoginSuccess extends LoginState {
-  LoginSuccess(this.user);
+  LoginSuccess({required this.user});
   final User user;
 }
 
-class LoginFailure extends LoginState {}
+class LoginFailure extends LoginState {
+  LoginFailure({required this.errorText});
+  final String errorText;
+}
 
 class LoginLoading extends LoginState {}
