@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
+/// 参考：https://www.sandromaglione.com/techblog/records-and-patterns-dart-language
+
 sealed class LoginState {}
 
 class LoginSuccess extends LoginState {
