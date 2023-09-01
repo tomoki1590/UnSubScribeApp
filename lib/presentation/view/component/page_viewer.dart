@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:unsbscribe_app/presentation/view/basic_page.dart';
 
+import '../basic_page.dart';
 import '../setting_page.dart';
 
 class PageViewer extends StatefulWidget {
