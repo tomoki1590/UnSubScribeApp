@@ -9,6 +9,7 @@ dependencies:
   buy_me_a_coffee_widget: ^2.0.0-nullsafety.0
   cloud_firestore: ^4.8.3
   cupertino_icons: ^1.0.2
+  firebase_auth: ^4.9.0
   firebase_core: ^2.15.0
   flutter:
     sdk: flutter
