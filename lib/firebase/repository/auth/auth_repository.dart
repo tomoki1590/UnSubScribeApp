@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../model/user/user.dart';
+import '../../firestore_refs.dart';
+
 /// [authRepositoryProvider]は[AuthRepository]のインスタンスを提供するための`Provider`です。
 final authRepositoryProvider = Provider.autoDispose((ref) => AuthRepository());
 
@@ -17,6 +20,15 @@ class AuthRepository {
   /// 成功した場合は[UserCredential]を返し、失敗またはキャンセルされた場合は`null`を返す。
   Future<UserCredential?> signInAnonymously() async {
     return _auth.signInAnonymously();
+  }
+
+  Future<void> addUser() async {
+    ///UID取得確認
+    final uid = FirebaseAuth.instance.currentUser!.uid;
+    final users = Users(uid: uid, createdAt: DateTime.now());
+
+    print('Signed Out with temporary account. uid: $uid');
+    await usersRef.doc(uid).set(users);
   }
 
   /// Firebaseのユーザーの認証状態の変更を購読します。

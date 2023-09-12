@@ -58,6 +58,8 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
   Future<void> signInAnonymously() async {
     try {
       await authRepository.signInAnonymously();
+      await authRepository.addUser();
+
       ///UID取得確認
       final uid = FirebaseAuth.instance.currentUser!.uid;
       print('Signed Out with temporary account. uid: $uid');

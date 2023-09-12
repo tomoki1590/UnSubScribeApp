@@ -14,33 +14,33 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-User _$UserFromJson(Map<String, dynamic> json) {
-  return _User.fromJson(json);
+Users _$UsersFromJson(Map<String, dynamic> json) {
+  return _Users.fromJson(json);
 }
 
 /// @nodoc
-mixin _$User {
+mixin _$Users {
   String get uid => throw _privateConstructorUsedError;
   @TimestampConverter()
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
+  $UsersCopyWith<Users> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserCopyWith<$Res> {
-  factory $UserCopyWith(User value, $Res Function(User) then) =
-      _$UserCopyWithImpl<$Res, User>;
+abstract class $UsersCopyWith<$Res> {
+  factory $UsersCopyWith(Users value, $Res Function(Users) then) =
+      _$UsersCopyWithImpl<$Res, Users>;
   @useResult
   $Res call({String uid, @TimestampConverter() DateTime? createdAt});
 }
 
 /// @nodoc
-class _$UserCopyWithImpl<$Res, $Val extends User>
-    implements $UserCopyWith<$Res> {
-  _$UserCopyWithImpl(this._value, this._then);
+class _$UsersCopyWithImpl<$Res, $Val extends Users>
+    implements $UsersCopyWith<$Res> {
+  _$UsersCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -67,18 +67,18 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
 }
 
 /// @nodoc
-abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
-      __$$_UserCopyWithImpl<$Res>;
+abstract class _$$_UsersCopyWith<$Res> implements $UsersCopyWith<$Res> {
+  factory _$$_UsersCopyWith(_$_Users value, $Res Function(_$_Users) then) =
+      __$$_UsersCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String uid, @TimestampConverter() DateTime? createdAt});
 }
 
 /// @nodoc
-class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
-    implements _$$_UserCopyWith<$Res> {
-  __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then)
+class __$$_UsersCopyWithImpl<$Res> extends _$UsersCopyWithImpl<$Res, _$_Users>
+    implements _$$_UsersCopyWith<$Res> {
+  __$$_UsersCopyWithImpl(_$_Users _value, $Res Function(_$_Users) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     Object? uid = null,
     Object? createdAt = freezed,
   }) {
-    return _then(_$_User(
+    return _then(_$_Users(
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
@@ -102,11 +102,12 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
 
 /// @nodoc
 @JsonSerializable()
-class _$_User extends _User {
-  const _$_User({this.uid = '', @TimestampConverter() this.createdAt})
+class _$_Users extends _Users {
+  const _$_Users({this.uid = '', @TimestampConverter() this.createdAt})
       : super._();
 
-  factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
+  factory _$_Users.fromJson(Map<String, dynamic> json) =>
+      _$$_UsersFromJson(json);
 
   @override
   @JsonKey()
@@ -117,14 +118,14 @@ class _$_User extends _User {
 
   @override
   String toString() {
-    return 'User(uid: $uid, createdAt: $createdAt)';
+    return 'Users(uid: $uid, createdAt: $createdAt)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_User &&
+            other is _$_Users &&
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt));
@@ -137,24 +138,24 @@ class _$_User extends _User {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserCopyWith<_$_User> get copyWith =>
-      __$$_UserCopyWithImpl<_$_User>(this, _$identity);
+  _$$_UsersCopyWith<_$_Users> get copyWith =>
+      __$$_UsersCopyWithImpl<_$_Users>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserToJson(
+    return _$$_UsersToJson(
       this,
     );
   }
 }
 
-abstract class _User extends User {
-  const factory _User(
+abstract class _Users extends Users {
+  const factory _Users(
       {final String uid,
-      @TimestampConverter() final DateTime? createdAt}) = _$_User;
-  const _User._() : super._();
+      @TimestampConverter() final DateTime? createdAt}) = _$_Users;
+  const _Users._() : super._();
 
-  factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
+  factory _Users.fromJson(Map<String, dynamic> json) = _$_Users.fromJson;
 
   @override
   String get uid;
@@ -163,5 +164,6 @@ abstract class _User extends User {
   DateTime? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;
+  _$$_UsersCopyWith<_$_Users> get copyWith =>
+      throw _privateConstructorUsedError;
 }

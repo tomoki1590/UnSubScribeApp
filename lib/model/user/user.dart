@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../firebase/timestamp_converter.dart';
@@ -7,19 +8,24 @@ part 'user.freezed.dart';
 part 'user.g.dart';
 
 @freezed
-class User with _$User {
-  const factory User({
+class Users with _$Users {
+  const factory Users({
     @Default('') String uid,
     @TimestampConverter() DateTime? createdAt,
-  }) = _User;
-  const User._();
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  }) = _Users;
+  const Users._();
+  factory Users.fromJson(Map<String, dynamic> json) => _$UsersFromJson(json);
 
-  factory User.fromDocumentSnapshot(DocumentSnapshot ds) {
+  factory Users.fromDocumentSnapshot(DocumentSnapshot ds) {
+    final uid = FirebaseAuth.instance.currentUser!.uid;
     final data = ds.data()! as Map<String, dynamic>;
-    return User.fromJson(<String, dynamic>{
+    return Users.fromJson(<String, dynamic>{
       ...data,
-      'UserId': ds.id,
+      'uid': uid,
     });
+  }
+  Map<String, dynamic> toJsonForFirestore() {
+    final json = toJson();
+    return json..remove('id');
   }
 }

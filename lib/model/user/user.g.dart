@@ -6,13 +6,13 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
+_$_Users _$$_UsersFromJson(Map<String, dynamic> json) => _$_Users(
       uid: json['uid'] as String? ?? '',
       createdAt:
           const TimestampConverter().fromJson(json['createdAt'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
+Map<String, dynamic> _$$_UsersToJson(_$_Users instance) => <String, dynamic>{
       'uid': instance.uid,
       'createdAt': const TimestampConverter().toJson(instance.createdAt),
     };
