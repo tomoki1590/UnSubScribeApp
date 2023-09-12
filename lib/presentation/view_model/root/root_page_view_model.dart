@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:unsubscribe_app/firebase/repository/auth/auth_repository.dart';
+import 'package:unsubscribe_app/firebase/repository/user_repository.dart';
 
 import 'login_state.dart';
 
@@ -26,6 +27,7 @@ final rootPageViewModelProvider =
     StateNotifierProvider.autoDispose<RootPageViewModel, RootPageState>(
   (ref) => RootPageViewModel(
     authRepository: ref.watch(authRepositoryProvider),
+    userRepository: ref.watch(userRepositoryProvider),
   ),
 );
 
@@ -34,8 +36,10 @@ final rootPageViewModelProvider =
 /// このクラスはFirebase Authenticationとのインタラクションを担当し、ログインの成功、失敗、読み込み状態を
 /// [RootPageState]を通じて通知します。
 class RootPageViewModel extends StateNotifier<RootPageState> {
-  RootPageViewModel({required this.authRepository})
-      : super(RootPageState(loginState: LoginLoading(), isLogged: false)) {
+  RootPageViewModel({
+    required this.authRepository,
+    required this.userRepository,
+  }) : super(RootPageState(loginState: LoginLoading(), isLogged: false)) {
     /// 初期化処理はこのスコープで行う
 
     /// 匿名認証
@@ -53,12 +57,13 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
     });
   }
   final AuthRepository authRepository;
+  final UserRepository userRepository;
 
   /// 匿名でFirebase Authenticationにサインインします。
   Future<void> signInAnonymously() async {
     try {
       await authRepository.signInAnonymously();
-      await authRepository.addUser();
+      await userRepository.addUserId();
 
       ///UID取得確認
       final uid = FirebaseAuth.instance.currentUser!.uid;
