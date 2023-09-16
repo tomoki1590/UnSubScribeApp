@@ -19,6 +19,7 @@ class AuthRepository {
     return _auth.signInAnonymously();
   }
 
+
   /// Firebaseのユーザーの認証状態の変更を購読します。
   ///
   /// ユーザーの状態が変更されるたびに[User]をストリームとして送出する。ログアウトまたはサインアウトの場合は`null`を送出する。

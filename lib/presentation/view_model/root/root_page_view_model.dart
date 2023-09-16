@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:unsubscribe_app/firebase/repository/auth/auth_repository.dart';
+import 'package:unsubscribe_app/firebase/repository/user_repository.dart';
 
 import 'login_state.dart';
 
@@ -8,13 +9,15 @@ import 'login_state.dart';
 ///
 /// [loginState]プロパティによって、ログインが成功、失敗、または読み込み中であるかが示されます。
 class RootPageState {
-  RootPageState({required this.loginState});
+  RootPageState({required this.loginState, required this.isLogged});
   final LoginState loginState;
+  final bool isLogged;
 
   /// 現在の[RootPageState]のコピーを生成し、指定されたプロパティを使用して更新します。
-  RootPageState copyWith({User? user, LoginState? loginState}) {
+  RootPageState copyWith({bool? isLogged, LoginState? loginState}) {
     return RootPageState(
       loginState: loginState ?? this.loginState,
+      isLogged: isLogged ?? this.isLogged,
     );
   }
 }
@@ -24,6 +27,7 @@ final rootPageViewModelProvider =
     StateNotifierProvider.autoDispose<RootPageViewModel, RootPageState>(
   (ref) => RootPageViewModel(
     authRepository: ref.watch(authRepositoryProvider),
+    userRepository: ref.watch(userRepositoryProvider),
   ),
 );
 
@@ -32,8 +36,10 @@ final rootPageViewModelProvider =
 /// このクラスはFirebase Authenticationとのインタラクションを担当し、ログインの成功、失敗、読み込み状態を
 /// [RootPageState]を通じて通知します。
 class RootPageViewModel extends StateNotifier<RootPageState> {
-  RootPageViewModel({required this.authRepository})
-      : super(RootPageState(loginState: LoginLoading())) {
+  RootPageViewModel({
+    required this.authRepository,
+    required this.userRepository,
+  }) : super(RootPageState(loginState: LoginLoading(), isLogged: false)) {
     /// 初期化処理はこのスコープで行う
 
     /// 匿名認証
@@ -46,20 +52,28 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
       }
       state = RootPageState(
         loginState: LoginSuccess(user: user),
+        isLogged: true,
       );
     });
   }
   final AuthRepository authRepository;
+  final UserRepository userRepository;
 
   /// 匿名でFirebase Authenticationにサインインします。
   Future<void> signInAnonymously() async {
     try {
       await authRepository.signInAnonymously();
+      await userRepository.addUserId();
+
+      ///UID取得確認
+      final uid = FirebaseAuth.instance.currentUser!.uid;
+      print('Signed Out with temporary account. uid: $uid');
     } on Exception {
       state = RootPageState(
         loginState: LoginFailure(
           errorText: 'サインインに失敗しました',
         ),
+        isLogged: false,
       );
     }
   }
