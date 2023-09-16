@@ -7,7 +7,7 @@ import '../firestore_refs.dart';
 final userRepositoryProvider = Provider.autoDispose((ref) => UserRepository());
 
 class UserRepository {
-  Future<void> addUserId() async {
+  Future<void> createUser() async {
     ///UID取得確認
     final uid = FirebaseAuth.instance.currentUser!.uid;
     final users = Users(uid: uid, createdAt: DateTime.now());

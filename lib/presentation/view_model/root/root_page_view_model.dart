@@ -9,15 +9,13 @@ import 'login_state.dart';
 ///
 /// [loginState]プロパティによって、ログインが成功、失敗、または読み込み中であるかが示されます。
 class RootPageState {
-  RootPageState({required this.loginState, required this.isLogged});
+  RootPageState({required this.loginState});
   final LoginState loginState;
-  final bool isLogged;
 
   /// 現在の[RootPageState]のコピーを生成し、指定されたプロパティを使用して更新します。
-  RootPageState copyWith({bool? isLogged, LoginState? loginState}) {
+  RootPageState copyWith({LoginState? loginState}) {
     return RootPageState(
       loginState: loginState ?? this.loginState,
-      isLogged: isLogged ?? this.isLogged,
     );
   }
 }
@@ -39,7 +37,7 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
   RootPageViewModel({
     required this.authRepository,
     required this.userRepository,
-  }) : super(RootPageState(loginState: LoginLoading(), isLogged: false)) {
+  }) : super(RootPageState(loginState: LoginLoading())) {
     /// 初期化処理はこのスコープで行う
 
     /// 匿名認証
@@ -52,7 +50,6 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
       }
       state = RootPageState(
         loginState: LoginSuccess(user: user),
-        isLogged: true,
       );
     });
   }
@@ -63,17 +60,12 @@ class RootPageViewModel extends StateNotifier<RootPageState> {
   Future<void> signInAnonymously() async {
     try {
       await authRepository.signInAnonymously();
-      await userRepository.addUserId();
-
-      ///UID取得確認
-      final uid = FirebaseAuth.instance.currentUser!.uid;
-      print('Signed Out with temporary account. uid: $uid');
+      await userRepository.createUser();
     } on Exception {
       state = RootPageState(
         loginState: LoginFailure(
           errorText: 'サインインに失敗しました',
         ),
-        isLogged: false,
       );
     }
   }
