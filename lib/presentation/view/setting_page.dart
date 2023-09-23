@@ -1,4 +1,3 @@
-import 'package:buy_me_a_coffee_widget/buy_me_a_coffee_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -149,9 +148,9 @@ class SettingPage extends StatelessWidget {
                   ],
                 ),
               ),
-              const BuyMeACoffeeWidget(
-                sponsorID: 'sBGXj7Pl4',
-              ),
+              // const BuyMeACoffeeWidget(
+              //   sponsorID: 'sBGXj7Pl4',
+              // ),
             ],
           ),
         ),
